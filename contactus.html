@@ -1,0 +1,578 @@
+<!doctype html>
+<html>
+<head>
+	<title>Perfect Smile:Dental Clinic</title>
+
+	<!--characterset-->
+	<meta charset="utf-8">
+	<!--For making the website responsive-->
+	<meta name="viewport" width="device-width", initial-scale="1.0">
+
+	<meta name="description" content="This is a project work of CIS-145 webpublishing course in University of Fraser Valley taught by Prof. Lili Saghafi done by team "Webmasters". This website represents a dental clinic named 
+	Perfect Smile.">
+
+	<meta name="keywords" content="CIS-145, WEB PUBLISHING, University of Fraser Valley, Prof. Lili Saghafi, Term Project, Webmasters, HTML5, CSS3, Dental clinic, Perfect Smile">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+
+	<meta name="author" content=" Team Webmasters, Pratham(Team Leader), Pushpanjali, Rohan Syal, Yajat Chawla">
+	<meta name="generator" content="Notepad">
+
+
+	<style>
+
+*{box-sizing:border-box;
+Margin:0;
+padding:0;}
+
+
+body{font-family:sans-serif, georgia;
+	background-color:#defcfc;}
+
+.title {display:block;
+	position:fixed;
+	top:0;
+	z-index:1;
+	height:150px;
+	width:100%;
+	background-color:white;
+	padding-left:10%;}
+
+.title h1 {font-size:60px;
+	padding:0;
+	margin:0;
+	z-index:1;
+	margin-left:16%;
+	padding-top:4%;
+	font-family:"Comic Sans MS", sans-serif;
+	color:#00bcd4;
+	letter-spacing:3px;
+	background-color:white;
+	}
+
+.logo {position:fixed;
+	top:0;
+	right:0;
+	z-index:1;
+	margin-left:0;
+	padding-left:0;
+	margin-top:0px;
+	float:right;
+	overflow:hidden;}
+
+
+hr {width: 50%;
+    color: #7f7f7f;
+    background-color: #7f7f7f;
+    height: 3px;
+    margin: 60px 0 60px 0;
+}
+
+
+
+
+
+
+.menu-wrap {
+position:fixed;
+top:0px;
+left:0;
+z-index:1;
+margin-right:0;
+padding-right:0;}
+
+.menu-wrap .toggler {
+position:absolute;
+top:0px;
+left:0;
+z-index:2;
+cursor:pointer;
+width:100px;
+height:100px;
+opacity:0;}
+
+.menu-wrap .Hamburger{
+position:absolute;
+top:0px;
+left:0;
+z-index:1;
+width:150px;
+height:150px;
+padding:2rem;
+background-color:grey;
+display:flex;
+align-items:center;
+justify-content:center;}
+
+
+/*  hamburger line*/
+.menu-wrap .Hamburger > div {
+position:relative;
+width:100%;
+height:4px;
+background-color:black;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+/* top and bottom hamburger line*/
+.menu-wrap .Hamburger > div:before,
+.menu-wrap .Hamburger > div:after
+{content:'';
+position:absolute;
+z-index:1;
+top:-20px;
+width:100%;
+height:4px;
+background: inherit;
+}
+
+/* top hamburger line*/
+.menu-wrap .Hamburger > div:after {
+top:20px;
+}
+
+.menu-wrap .toggler:checked + .Hamburger > div {
+background-color:#fff;}
+
+.menu-wrap .toggler:checked ~ .menu{visibility:visible;}
+
+.menu-wrap .toggler:checked ~ .menu > div {transform:scale(1);}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {opacity:1;}
+
+
+
+
+.menu-wrap .menu{
+position:fixed;
+top:0px;
+left:0;
+width:100%;
+height:100%;
+overflow:hidden;
+display:flex;
+align-items:center;
+justify-content:center;
+visibility:hidden;}
+
+
+
+.menu-wrap .menu > div {
+background-color:#f9f6f7;
+border-radius:50%;
+width:300vw;
+height:300vw;
+display:flex;
+flex:none;
+align-items:center;
+justify-content:center;
+transform:scale(0);
+}
+
+
+.menu-wrap .menu > div > div {
+text-align:center;
+max-width:90vw;
+max-height:100vh;
+opacity:0;}
+
+
+
+.menu ul li {
+list-style:none;
+color:grey;
+font-size:3rem;
+padding:1rem;}
+
+
+
+ a {
+
+text-decoration:none;
+}
+.contactus {height:100vh;
+		background-image:url("contactus.jpeg");
+		background-position: center;
+ 		background-repeat: no-repeat;
+		background-attachment:fixed;
+  		background-size: cover;
+ 		position: relative;
+		z-index:-2;
+		opacity:0.5;}
+.contactus {position:relative;
+	top:150px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	
+	}
+
+.contactush3 {border:5px solid black;
+	position:relative;
+	padding:30px;
+	border-radius:30px;
+	z-index:10;
+	opacity:1;
+	font-size:40px;
+	color:black;
+	top:0px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	background-color:white;}
+
+.hr1 {position:relative;
+	top:200px;}
+
+.hr2 {position:relative;
+	top:400px;}
+
+.contact1, .contact2 {position:relative;
+	top:200px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	font-size:40px;
+	color:grey;
+	background-color:white;
+	border-radius:20px;
+	margin:12%;
+	line-height:1.5;}
+
+.contact2 {position:relative;
+	top:100px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	font-size:40px;
+	color:grey;
+	background-color:white;
+	border-radius:20px;
+	margin:12%;
+	line-height:1.5;}
+
+
+
+
+
+
+
+footer {background-color:#aaaaaa;
+	position:relative;
+	top:400px;
+	height:1600px;}
+
+.address {position:relative;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		top:50px;
+		
+		
+		line-height:2;
+		font-size:40px;
+		}
+
+.contact {position:relative;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		top:50px;
+		padding:20px;
+		
+		line-height:2;
+		font-size:40px;}
+.Disclamier {position:relative;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		padding:40px;
+		line-height:2;
+		font-size:40px;
+		}
+.Developer {position:relative;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		padding:40px;
+		line-height:2;
+		font-size:40px;}
+
+.button1, .button2 {
+	position:relative;
+	top:70px;
+	border-radius:30px;
+  	color: white;
+	background-color:grey;
+ 	padding: 16px 32px;
+	display:flex;
+  	text-align: center;
+  	text-decoration: none;
+	text-transform:uppercase;
+  	font-size:25px;
+  	margin: 4px 2px;
+  	transition-duration: 0.4s;
+  	cursor: pointer;
+}
+
+.button2:hover {background-color:#bbbbbb;}
+.button1:hover {background-color:#bbbbbb;}
+
+.button1 {float:left;
+	margin:0 0% 0 7%;}
+
+.button2 {float:right;
+	margin:0 7% 0 0%;}
+
+.breadcrumbnavigation {position:relative;
+			top:11px;
+			height:50px;
+			background-color:#cffffe;
+			float:left;
+			display:inline;
+			font-size:30px;
+			width:100%;}
+.breadcrumb{padding:10px;
+  font-family:sans-serif;
+  width:100%;
+}
+.breadcrumb--items {
+  display:inline;
+}
+
+.breadcrumb--items:not(:last-of-type)::after {
+  content:'\203a';
+  margin:0 5px;
+  
+}
+
+.breadcrumb--link {
+  text-decoration:none;
+  color:grey;
+}
+
+.breadcrumb--link--active {
+  color:black;
+}
+
+.breadcrumb--link:hover {
+  text-decoration:underline;
+}
+
+table, th, td {
+  border: none;
+  font-size:30px;
+  color:grey;
+  position:relative;
+
+  
+  
+  }
+td {
+	padding:0 4% 0 4%;
+}
+
+
+table {width:70%;
+	top:200px;
+	}
+
+.officehours {	margin-left:25%;}
+
+
+th,td {position:relative;
+	top:30px;
+	padding:2% 0 2% 0;
+	text-align:center;}
+
+
+
+
+
+
+
+
+</style>
+</head>
+
+
+<body>
+
+	<div class="title"><h1>PERFECT SMILE</h1></div>
+
+	<div class="menu-wrap">
+
+	<input type="checkbox" class="toggler">
+		<div class="Hamburger">
+			<div>
+			</div>
+		</div>
+		<div class="menu">
+			<div>
+				<div>
+					<ul>
+						<a href="Bookanappointment.html"><li>BOOK AN APPOINTMENT</li></a>
+						<a href="Virtualconsultation.html"><li>VIRTUAL CONSULTATION</li></a>
+						<a href="Patientreviews.html"><li>PATIENT REVIEWS</li></a>
+						<a href="services.html"><li>OUR SERVICES</li></a>
+						<a href="findus.html"><li>FIND US</li></a>
+						<a href="contactus.html"><li>CONTACT US</li></a>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+        
+	<div class="logo">
+		<figure>
+		<a href="index.html"><img src="logo.png" alt="HOME" width="200px" height="150px"></a>
+		</figure>
+	</div>
+	
+</div>
+
+
+
+
+<div class="contactus">
+
+		
+
+<div class="contactush3"><h3>CONTACT US</h3><br></div>
+
+
+</div>
+<div class="breadcrumbnavigation" style="display:inline; position:relative;top:150px; width:100%;padding:0; margin:0;">
+
+		<ul class="breadcrumb" >
+      <li class="breadcrumb--items">
+        <a href="index.html" class="breadcrumb--link">HOME</a>
+      </li>
+
+	<li class="breadcrumb--items">
+        <a href="contactus.html" class="breadcrumb--link breadcrumb--link--active">CONTACT US</a>
+      </li>
+    </ul>
+
+</div>
+<div class="hr1"><center><hr noshade></center></div>
+
+
+
+<div class="contact1" style="padding:2%;">
+
+<p>Contact Perfect smile Dentistry
+We’re always accepting new patients!
+We look forward to hearing from you and helping you and achieve a healthy, beautiful smile.
+</p>
+
+
+</div>
+
+
+
+<div class="contact2">
+
+<p>E-mail:<br><a style="text-decoration:none;color:grey;" href="mailto:mailto:webmastersUFV@gmail.com">webmastersUFV@gmail.com</a>
+				<br>Call us:XXXXX XXXXX</p>
+
+</div>
+<button class="button1" type="button"><a style="color:white; text-decoration:none;" href="Bookanappointment.html">Book an appointment</a></button></center>
+<button class="button2" type="button"><a style="color:white; text-decoration:none;" href="Virtualconsultation.html">Virtual consultation</a></button></center>
+
+<div class="officehours">
+<center>
+<table style="float:left;">
+	<caption>Office Hours</caption>
+  <tr>
+    <th class="th1">Day</th>
+    <th class="th2">Time</th>
+  </tr>
+  <tr>
+    <td>Monday</td>
+    <td>8:00am - 7:00pm</td>
+  </tr>
+  <tr>
+    <td>Tuesday</td>
+    <td>8:00am - 7:00pm</td>
+  </tr>
+  <tr>
+    <td>Wednesday</td>
+    <td>8:00am - 7:00pm</td>
+  </tr>
+  <tr>
+    <td>Thursday</td>
+    <td>8:00am - 7:00pm</td>
+  </tr>
+  <tr>
+    <td>Friday</td>
+    <td>8:00am - 7:00pm</td>
+  </tr>
+  <tr>
+    <td>Saturday</td>
+    <td>8:00am - 4:00pm</td>
+  </tr>
+  <tr>
+    <td>Sunday</td>
+    <td>Closed</td>
+  </tr>
+</table>
+</center>
+
+</div>
+
+<div class="hr2"><center><hr noshade></center></div>
+
+<footer>
+
+		<map name="socialmedia">
+  		<area shape="rect" coords="10,20,60,80" alt="instagram" href="#">
+ 		<area shape="rect" coords="80,20,125,80" alt="facebook" href="#">
+  		<area shape="rect" coords="155,20,190,80" alt="twitter" href="#">
+		</map>
+
+		
+		<center><img class="socialmedia" src="socialmedia.png" alt="Instagram-Facebook-twitter" usemap="#socialmedia" width="200px" height="100px"></center>
+		
+		<center>
+			<div class="address"><p>Address:</br>
+				56 Nehru road</br>
+				Sector 19, 
+				Chandigarh</p>
+			</div>
+		</center>
+
+
+
+		<center>
+			<div class="contact">
+				<p>Contact: <br>E-mail:<a style="text-decoration:none;color:black;" href="mailto:mailto:webmastersUFV@gmail.com">webmastersUFV@gmail.com</a></br>
+				Call us:XXXXX XXXXX</p>
+			</div>
+		</center>
+
+		<center>
+			<div class="Disclamier">
+				<p>Disclamier:<br>
+				“This is a project of CIS 145 , Web Publishing Course in UFV, Instructed and requested by Professor Lili Saghafi"</p>
+			</div>
+		</center>
+
+		<center>
+			<div class="Developer">
+				<p>Designed and Developed by:<br>
+				Team WEBMASTERS</p>
+			</div>
+		</center>
+		
+		<center>
+			<div>
+				<a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank"><img src="Accessibilitylogo.png" alt="accessibility"></a>
+			</div>
+		</center>
+</footer>
+
+</body>
+</html>
